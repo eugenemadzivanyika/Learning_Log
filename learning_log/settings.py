@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     "users",
     
     # third party apps
-    "bootstrap4" 
+    'bootstrap4',
     
     # Default django apps
     'django.contrib.admin',
@@ -47,6 +47,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    
+   
 ]
 
 MIDDLEWARE = [
