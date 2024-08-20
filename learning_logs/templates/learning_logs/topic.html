@@ -8,9 +8,7 @@
 
 {% block content%}
 
-{% comment %}   <p>Topic: {{topic}}</p>
 
-  <p>Entries:</p> {% endcomment %}
 
   <p>
     <a href="{% url 'learning_logs:new_entry' topic.id %}">
@@ -41,28 +39,7 @@
 
   {% endfor %}
 
-  {% comment %} <ul>
-  {% for entry in entries %}
-    <li>
-      <p>{{ entry.date_added|date:"M d, Y H:i" }}</p>
-      <p>{{ entry.text|linebreaks }}</p>
 
-      <p>
-        <a href="{% url "learning_logs:edit_entry" entry.id %}">
-          Edit entry
-        </a>
-      </p>
-
-    </li>
-
-  {% empty %}
-        <p>
-            There are no entries made for this topic yet.
-        </p>
-
-  {% endfor %}
-
-  </ul> {% endcomment %}
 
 
 {% endblock content%}
