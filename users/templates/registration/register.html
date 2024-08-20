@@ -1,17 +1,27 @@
 {% extends "learning_logs/base.html" %}
 
+{% block page_header %}
+  <div class="page-header col-12 my-0 mt-0">
+    <p>Sign Up</p>
+  </div>
+{% endblock page_header %}
+
+
 {% block content %}
 
+<div class="register-container my-5">
   <form method="post" action="{% url 'users:register' %}">
     {% csrf_token %}
-    {{form.as_p}}
-
-    <button name="submit">
-      Register
-    </button>
-
-    <input type="hidden" name="next" value="{% url 'learning_logs:index' %}" />
-
+    <fieldset>
+      <legend>Register</legend>
+      {{ form.as_p }}
+      <input type="hidden" name="next" value="{% url 'learning_logs:index' %}" />
+      <button type="submit" name="submit" class="btn btn-primary">
+        Register
+      </button>
+    </fieldset>
   </form>
+</div>
+
 
 {% endblock content %}
