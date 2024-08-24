@@ -132,4 +132,28 @@
 }
 
 
+.topic-container {
+  background-color: #f8f9fa; /* Light grey background color */
+  padding: 40px; /* Padding around the content */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  text-align: center; /* Center-align text */
+  box-sizing: content-box;
+
+
+      /* Center the container */
+  margin: 0 auto; /* Center horizontally */
+  max-width:90%; /* Limit the width to 90% of the screen */
+  width: 1100px; /* Set a specific width, adjust as needed */
+  min-height: 300px;
+  max-height: 800px;
+  
+      /* Prevent touching the edges */
+  /* box-sizing: border-box; Ensure padding is included in the width */
+}
+
+
+
+
+
 

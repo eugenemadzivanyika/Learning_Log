@@ -3,7 +3,19 @@
 {% block content %}
 
   <p>
-    You have successfully logged out. Thank you for visiting!
+  
   </p>
+
+  <div class="learning-container container-fluid mt-5 my-5">
+    <h1 class="display-3">Track your learning.</h1>
+
+    <p class="lead">
+      You have successfully logged out. Thank you for visiting!
+    </p>
+
+    <a class="btn btn-lg btn-primary" href="{% url 'users:login' %}" role="button">
+      Login &raquo;
+    </a>
+  </div>
 
 {% endblock content %}

@@ -1,42 +1,38 @@
 {% extends "learning_logs/base.html" %}
 
 {% block page_header %}
-  <h1>
-    Topics
-  </h1>
+  <h1 class="text-center mt-0 mb-0">Topics</h1>
 {% endblock page_header %}
 
 {% block content %}
 
-{% comment %}   <p>
-    Topics    
-  </p> {% endcomment %}
+<div class="container-sm py-3" style="background-color: #f8f9fa; border-radius: 5px; max-width: 600px;">
 
-  <ul>
-    {% for topic in topics%}
-      <li>
+
+  <ul class="list-unstyled">
+    {% for topic in topics %}
+      <li class="mb-3">
         <h3>
-          <a href="{% url 'learning_logs:topic' topic.id %}">
+          <a href="{% url 'learning_logs:topic' topic.id %}" class="text-dark" style="text-decoration: none;"
+          style="transition: transform 0.3s ease; transform: scale(1);"
+          onmouseover="this.style.transform='scale(1.1)'; this.style.boxShadow='0 4px 8px rgba(0, 0, 0, 0.3)'; this.style.filter='grayscale(100%)';"
+          onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='none'; this.style.filter='none';"
+
+           >
             {{ topic }}
           </a>
-        </h3> 
-      </li>
-
-    {% empty %}
-      <li>
-        <h3>
-          No topics have been added yet.
         </h3>
       </li>
-
+    {% empty %}
+      <li>
+        <h3>No topics have been added yet.</h3>
+      </li>
     {% endfor %}
   </ul>
-  
-    
-  <h3>
-    <a href="{% url 'learning_logs:new_topic' %}">
-      Add new topic
-    </a>
-  </h3>
 
-{% endblock content%}
+  <h3>
+    <a href="{% url 'learning_logs:new_topic' %}">Add new topic</a>
+  </h3>
+</div>
+
+{% endblock content %}
